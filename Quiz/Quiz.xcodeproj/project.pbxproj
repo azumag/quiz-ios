@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103FABDB1D55CF5100C8F718 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103FABDA1D55CF5100C8F718 /* CategoryViewController.swift */; };
 		10E80F0A1D55ABC000D25240 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E80F091D55ABC000D25240 /* AppDelegate.swift */; };
 		10E80F0C1D55ABC000D25240 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E80F0B1D55ABC000D25240 /* ViewController.swift */; };
 		10E80F0F1D55ABC000D25240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E80F0D1D55ABC000D25240 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103FABDA1D55CF5100C8F718 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		10E80F061D55ABC000D25240 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E80F091D55ABC000D25240 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10E80F0B1D55ABC000D25240 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				10E80F091D55ABC000D25240 /* AppDelegate.swift */,
 				10E80F0B1D55ABC000D25240 /* ViewController.swift */,
+				103FABDA1D55CF5100C8F718 /* CategoryViewController.swift */,
 				10E80F0D1D55ABC000D25240 /* Main.storyboard */,
 				10E80F101D55ABC000D25240 /* Assets.xcassets */,
 				10E80F121D55ABC000D25240 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10E80F0C1D55ABC000D25240 /* ViewController.swift in Sources */,
+				103FABDB1D55CF5100C8F718 /* CategoryViewController.swift in Sources */,
 				10E80F0A1D55ABC000D25240 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +290,7 @@
 				10E80F1A1D55ABC000D25240 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

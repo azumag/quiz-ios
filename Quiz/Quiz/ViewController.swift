@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
 
+    @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var startbtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startbtn.layer.cornerRadius = startbtn.bounds.size.width/16
+        startbtn.clipsToBounds = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func statbtnAction(sender: AnyObject) {
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
