@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -38,7 +39,7 @@
                                 </state>
                                 <connections>
                                     <action selector="statbtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YfT-61-doY"/>
-                                    <segue destination="bMQ-PG-tdH" kind="show" id="Yre-YN-hdy"/>
+                                    <segue destination="fTE-EY-Qyh" kind="show" id="hqN-VB-OAr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,23 +61,49 @@
             </objects>
             <point key="canvasLocation" x="1100" y="299"/>
         </scene>
-        <!--Category View Controller-->
-        <scene sceneID="3Zy-zf-3Up">
+        <!--Category Table View Controller-->
+        <scene sceneID="bXF-62-NrO">
             <objects>
-                <viewController id="bMQ-PG-tdH" customClass="CategoryViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Wau-9u-GGd"/>
-                        <viewControllerLayoutGuide type="bottom" id="dLy-qE-pIu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="e9W-Vt-XPg">
+                <tableViewController id="fTE-EY-Qyh" customClass="CategoryTableViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kMI-bu-hK4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.67529056710000002" blue="0.99624565279999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PYn-g9-SJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="100" id="bEN-Tl-6TP" customClass="CategoryTableViewCell" customModule="Quiz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bEN-Tl-6TP" id="Zcb-33-IxE">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIn-Yk-136">
+                                            <rect key="frame" x="8" y="39" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZIn-Yk-136" firstAttribute="trailing" secondItem="Zcb-33-IxE" secondAttribute="trailingMargin" id="EaZ-mv-PPh"/>
+                                        <constraint firstItem="ZIn-Yk-136" firstAttribute="centerY" secondItem="Zcb-33-IxE" secondAttribute="centerY" id="aaJ-1M-WOX"/>
+                                        <constraint firstItem="ZIn-Yk-136" firstAttribute="leading" secondItem="Zcb-33-IxE" secondAttribute="leadingMargin" id="p5e-9b-oNT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryname" destination="ZIn-Yk-136" id="l1q-tV-Z3b"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fTE-EY-Qyh" id="EQY-Xa-XMq"/>
+                            <outlet property="delegate" destination="fTE-EY-Qyh" id="RCh-F0-lGW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ygY-bT-blf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="295"/>
+            <point key="canvasLocation" x="1810" y="304"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LTY-vV-mWz">
