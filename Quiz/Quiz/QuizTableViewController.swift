@@ -15,6 +15,8 @@ class QuizTableViewController: UITableViewController {
     var objectpicturesForEachMeal:String!
     //let swiftBlogs = ["How","When","Who"]
     
+    var quizz:[Quiz]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +31,29 @@ class QuizTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayToPass.count
+        if let quizz = quizz {
+            return quizz.count
+        } else {
+            return 0;
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("quizCell", forIndexPath: indexPath) as! QuizTableViewCell
         
-        cell.quizTF.text = arrayToPass[indexPath.row]
+        if let quizz = quizz {
+            
+            let quiz = quizz[indexPath.row];
+            
+            cell.quizTF.text = "\(quiz.question)";
+            for ans in quiz.answers {
+                cell.quizTF.text = "\(cell.quizTF.text!),\(ans)"
+            }
+            
+            
+        } else {
+            cell.quizTF.text = ""
+        }
         
         return cell
     }
