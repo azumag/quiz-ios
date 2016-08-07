@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
     @IBAction func statbtnAction(sender: AnyObject) {
         
-        let remoteURL = NSURL(string: "https://raw.githubusercontent.com/AyeMyaThu/WorkShop-Android/master/category.json")
+        let remoteURL = NSURL(string: "http://192.168.100.9:3000/")
         
         if let remoteURL = remoteURL {
             
@@ -34,6 +34,8 @@ class ViewController: UIViewController {
             let jsonData = NSData(contentsOfURL: remoteURL)
             
             //Using check if nil as an alternative to serialize the data
+            
+            print(jsonData)
             
             if jsonData != nil {
                 
@@ -44,8 +46,8 @@ class ViewController: UIViewController {
                     let json = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: .AllowFragments)
                     
                     
-                    
-                    if let blogs = json["categories"] as? [[String: AnyObject]] {
+//                    if let blogs = json["categories"] as? [[String: AnyObject]] {
+                    if let blogs = json["category"] as? [[String: AnyObject]] {
                         
                         for blog in blogs {
                             
@@ -54,7 +56,7 @@ class ViewController: UIViewController {
                                 names.append(name)
                                 //self.category = ["A","B","C"]
                                 
-                                
+                                print(name)
                                 
                             }
                             
@@ -72,15 +74,15 @@ class ViewController: UIViewController {
                 
                 print(names)
                 self.category = names
-                
-                
+                self.performSegueWithIdentifier("GoToCT", sender: self)
+
+
             }
         }
         
-    self.performSegueWithIdentifier("GoToCT", sender: self)
-        
+
     }
-       
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let driver = segue.destinationViewController as! CategoryTableViewController
