@@ -23,6 +23,8 @@ class CategoryTableViewController: UITableViewController {
     
     var ObjectNamesOfFood = [String]()
     
+    var selectedCategory = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +57,7 @@ class CategoryTableViewController: UITableViewController {
         let row = indexPath.row
         
         self.ObjectNamesOfFood = self.namesOfFood[indexPath.row]
+        self.selectedCategory = arrayTocategory[indexPath.row];
         
         self.performSegueWithIdentifier("Segue", sender: self)
         print(arrayTocategory[row])
@@ -65,9 +68,12 @@ class CategoryTableViewController: UITableViewController {
         
         let driver = segue.destinationViewController as! QuizTableViewController
         
+        var quizz = QuizRetrieve.retrieve(self.selectedCategory);
+        
         var whatToPass = self.ObjectNamesOfFood
         
         driver.arrayToPass = whatToPass
+        driver.quizz = quizz
         
         
     }
