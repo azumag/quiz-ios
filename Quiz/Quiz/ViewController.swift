@@ -24,10 +24,14 @@ class ViewController: UIViewController {
         
         // nothing to do
     }
+    
+    @IBAction func textFIeld(sender: AnyObject) {
+            startbtn.hidden = false;
+    }
 
     @IBAction func statbtnAction(sender: AnyObject) {
         
-        let remoteURL = NSURL(string: "http://192.168.100.9:3000/")
+        let remoteURL = NSURL(string: "https://blooming-depths-53477.herokuapp.com/categories/")
         
         if let remoteURL = remoteURL {
             

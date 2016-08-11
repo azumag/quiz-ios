@@ -12,7 +12,7 @@ class QuizRetrieve: NSObject {
     
     static func retrieve(category:String) -> [Quiz] {
         
-        let remoteURL = NSURL(string: "http://192.168.100.9:3000/quizz/\(category)")
+        let remoteURL = NSURL(string: "https://blooming-depths-53477.herokuapp.com/quizzes/\(category)")
         var quizz = [Quiz]()
 
         if let remoteURL = remoteURL {
