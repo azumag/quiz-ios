@@ -15,7 +15,7 @@ class CategoryTableViewController: UITableViewController {
     var arrayTocategory:[String] = [String]()
     //let swiftBlogs = ["IT","Japan","Myanmar"]
     
-    let namesOfFood = [["What language used for making twitter?", "what is …..","what is ….."],
+    let namesOfFood = [["What language used for making twitter?", "what is abc.","what is def"],
                        ["Tortilla", "Chimichanga", "Paella"],
                        ["Burek od mesa","Grah", "Janjetina"],
                        ["Tapas", "Churros", "Flan"],
