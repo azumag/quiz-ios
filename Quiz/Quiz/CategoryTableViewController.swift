@@ -10,7 +10,7 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController {
     
-    
+    // nu wai fatty
     
     var arrayTocategory:[String] = [String]()
     //let swiftBlogs = ["IT","Japan","Myanmar"]
